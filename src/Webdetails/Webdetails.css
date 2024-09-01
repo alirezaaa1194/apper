@@ -1,0 +1,27 @@
+.web-design img {
+  animation: moveup 6s infinite linear;
+}
+
+.img1 {
+  animation-delay: 1s !important;
+}
+.img2 {
+  animation-delay: 4s !important;
+}
+#start-test-btn {
+  transition: all 0.5s;
+}
+#start-test-btn:hover {
+  box-shadow: 220px 0 0 0px rgb(255, 255, 255) inset;
+}
+@keyframes moveup {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

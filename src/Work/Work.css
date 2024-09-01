@@ -1,0 +1,31 @@
+.work-list:not(:last-child):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: calc(50% - 2px);
+  width: 4px;
+  height: calc(100% + 220px);
+  background-color: #dfdaf3;
+}
+.work-list:first-child:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  background-color: #dfdaf3;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .work-list:not(:last-child):before {
+    top: 0;
+    right: calc(0% - 26px);
+    height: calc(100% + 130px);
+    background-color: #dfdaf3;
+  }
+  .work-list:first-child:after {
+    display: none;
+  }
+}

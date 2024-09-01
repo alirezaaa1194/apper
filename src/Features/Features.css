@@ -1,0 +1,10 @@
+.hero-bg {
+  transform: scale(0.9) !important;
+  animation: hero-bg-rotate 10s infinite linear;
+}
+
+@keyframes hero-bg-rotate {
+  50% {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  * {
+    direction: rtl;
+    font-size: 1rem;
+    scroll-behavior: smooth;
+    @apply font-dana-regular;
+  }
+  body {
+    @apply h-[200vh];
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: dana-regular;
+    src: url("../public/fonts/dana/DanaFaNum-Regular.woff2");
+  }
+  @font-face {
+    font-family: dana-medium;
+    src: url("../public/fonts/dana/DanaFaNum-Medium.woff2");
+  }
+  @font-face {
+    font-family: dana-bold;
+    src: url("../public/fonts/dana/DanaFaNum-DemiBold.woff2");
+  }
+}

@@ -1,0 +1,117 @@
+.navbar-submenu-link::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  visibility: hidden;
+  opacity: 0;
+  @apply border-2 border-solid border-primary-purple me-2.5 rounded-full transition-all;
+}
+.navbar-submenu-link:hover::before {
+  right: 20px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.start-navbar-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 30px;
+  transform-origin: center;
+}
+.start-navbar-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 30px;
+  transform-origin: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .start-navbar-link::before {
+    animation: scaleWave2 3s infinite linear;
+  }
+  .start-navbar-link::after {
+    animation: scaleWave 3s infinite linear;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .submenu-dropdown {
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    padding-top: 0;
+  }
+  .submenu-dropdown.toggle {
+    padding-top: 12px;
+  }
+  .submenu-link.toggle {
+    @apply text-primary-purple;
+  }
+  .dropdown-item-icon {
+    transition: 0.4s;
+  }
+  .dropdown-item-icon.toggle {
+    transform: rotate(180deg);
+  }
+
+  .navbar.close {
+    transform: scaleY(0);
+  }
+  .navbar.open {
+    transform: scaleY(1);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .submenu-dropdown {
+    height: fit-content !important;
+  }
+  .navbar {
+    transform: scaleY(1) !important;
+  }
+}
+
+#open-close-navbar.open #close-btn-icon {
+  display: block;
+}
+
+#open-close-navbar.open #open-btn-icon {
+  display: none;
+}
+
+#open-close-navbar.close #close-btn-icon {
+  display: none;
+}
+
+#open-close-navbar.close #open-btn-icon {
+  display: block;
+}
+
+@keyframes scaleWave {
+  0% {
+    box-shadow: 0 0 0 0 rgba(107, 73, 242, 0.4);
+  }
+  100%,
+  30% {
+    box-shadow: 0 0 0 20px transparent;
+  }
+}
+
+@keyframes scaleWave2 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(107, 73, 242, 0.7);
+  }
+  100%,
+  30% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+}

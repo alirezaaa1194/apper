@@ -1,0 +1,22 @@
+.wave1{
+  animation: scaleCircle 2s 0s infinite linear;
+}
+.wave2{
+  animation: scaleCircle 2s .5s infinite linear;
+}
+.wave3{
+  animation: scaleCircle 2s 1s infinite linear;
+}
+@keyframes scaleCircle {
+  0% {
+    transform: scale(0.2, 0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+    opacity: 0;
+  }
+}
